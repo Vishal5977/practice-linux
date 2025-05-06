@@ -1,0 +1,135 @@
+   90  git clone https://github.com/Vishal5977/practice-linux.git
+   91  ls -la
+   92  cd practice-linux/
+   93  git branch
+   94  git branch branch1 main
+   95  git branch
+   96  git checkout branch1 
+   97  vi practice1.txt
+   98  cat practice1.txt 
+   99  git status
+  100  git add practice1.txt 
+  101  git status
+  102  git commit 
+  103  git commit -m "1st commit"
+  104  git log --online
+  105  git log
+  106  git push origin branch1
+  107  git status
+  108  cd ..
+  109  ls -la
+  110  cd vishal-notes/
+  111  ls -la
+  112  cd ..
+
+
+
+
+
+-------------------
+2nd attempt
+-------------------
+  113  cd practice-linux/
+  114  vi test2.java
+  115  cat test2.java 
+  116  git status
+  117  git add test2.java "2nd attempt"---> failed command , added the meassage "2nd attempt" thats why it failed to excute
+  118  git add test2.java 
+  119  git status
+  120  git commit -m "2nd attempt" 
+  121  git branch
+  122  ls -la
+  123  git push main branch1
+  124  git push origin brnach1
+  125  git push origin branch1
+  126  ls -la
+  127  git status
+  128  git log
+  129  git push origin branch1
+  130  git branch 
+  131  git checkout main
+  132  git pull origin main
+  133  git checkout branch1
+  134  git checkout --test2.java
+  135  git checkout branch1 --test2.java
+  136  ls -la
+  137  git status test2,java
+  138  git status test2.java
+  139  git log branch1 --test2.java
+  140  ls -la
+  141  git log 
+  142  git checkout main
+  143  git cherry-pick  519cb324bacb22d34ddf0b02faef4c98ab492b90 ---> this commands (cherry-pick) helps move the particular file from one branch to another 
+  144  git status
+  145  git push origin main
+  146  ls -la
+  147  git branch
+  148  git rm practice1.txt 
+  149  ls -la
+  150  git commit -m "remove the practice.txt from main"
+  151  git push origin main
+  152  git remote -v
+  153  history
+
+
+
+----------
+restore command
+----------
+git branch
+  155  git checekout branch1
+  156  vi test3.txt
+  157  cat test3.txt 
+  158  git status
+  159  git add test3.txt -----> here file is moved from the WD to Stagging 
+  160  git status
+  161  git restore --staged test3.txt ---- here i restored back from stagging to WD
+  162  git status
+  163  git add test3.txt -m "try"
+  164  cat test3.txt 
+  165  rm test3.txt 
+  166  ls -la
+  167  history
+
+------------------------------
+these commands shows file moved from main to branch1 , imp things is it not copied , cut paste 
+---------------------------------------
+  168  git branch
+  169  ls -la
+  170  ls 
+  171  git pull origin main
+  172  ls -l
+  173  git rm Linux\ commands ---> here file moved from remote branch to local  
+  174  git commit -m "remove the linux commands from main" 
+  175  git checkout branch1
+  176  git restore --source=main~1 --satged --worktree ' Linux\ commands'
+  177  git restore --source=main~1
+  178  git restore --source=main~1 --staged
+  179  git restore --source=main~1 --staged --worktree
+  180  git restore https://github.com/Vishal5977/practice-linux/tree/main ---> this is path of linux command file 
+  181  ls -la
+  182  git branch 
+  183  git checkout main
+  184  ls -la
+  185  git status
+  186  git push origin main
+  187  ls -la
+  188  git ;log
+  189  git log
+  190  ls 
+  191  git status --Linux\ commands
+  192  git status
+  193  pwd
+  194  ls -la
+  195  git restore 'Linux\ commands'
+  196  git branch
+  197  git checkout branch1
+  198  git restore --source=main~1 --staged --worktree Linux commands
+  199  git restore --source=main~1 --staged --worktree Linux\ commands ---> this is command to restore the file to branch1 staging area
+  200  ls -la
+  201  git status
+  202  git commit -m "moved from main to branch1" --> pushed to local repo 
+  203  git status
+  204  ls -la
+  205  git push origin branch1 --> PR
+  206  history
