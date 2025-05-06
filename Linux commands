@@ -90,3 +90,46 @@ git branch
   165  rm test3.txt 
   166  ls -la
   167  history
+
+------------------------------
+these commands shows file moved from main to branch1 , imp things is it not copied , cut paste 
+---------------------------------------
+  168  git branch
+  169  ls -la
+  170  ls 
+  171  git pull origin main
+  172  ls -l
+  173  git rm Linux\ commands ---> here file moved from remote branch to local  
+  174  git commit -m "remove the linux commands from main" 
+  175  git checkout branch1
+  176  git restore --source=main~1 --satged --worktree ' Linux\ commands'
+  177  git restore --source=main~1
+  178  git restore --source=main~1 --staged
+  179  git restore --source=main~1 --staged --worktree
+  180  git restore https://github.com/Vishal5977/practice-linux/tree/main ---> this is path of linux command file 
+  181  ls -la
+  182  git branch 
+  183  git checkout main
+  184  ls -la
+  185  git status
+  186  git push origin main
+  187  ls -la
+  188  git ;log
+  189  git log
+  190  ls 
+  191  git status --Linux\ commands
+  192  git status
+  193  pwd
+  194  ls -la
+  195  git restore 'Linux\ commands'
+  196  git branch
+  197  git checkout branch1
+  198  git restore --source=main~1 --staged --worktree Linux commands
+  199  git restore --source=main~1 --staged --worktree Linux\ commands ---> this is command to restore the file to branch1 staging area
+  200  ls -la
+  201  git status
+  202  git commit -m "moved from main to branch1" --> pushed to local repo 
+  203  git status
+  204  ls -la
+  205  git push origin branch1 --> PR
+  206  history
